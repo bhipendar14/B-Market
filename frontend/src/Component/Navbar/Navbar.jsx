@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import  { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AppBar, Toolbar, IconButton, Box } from "@mui/material";
 import { useCart } from "../CartContext";
 import logo from "../../assets/C.png";
 import products from "../ProductDetails/productsData";
 import CartImage from "../../assets/Cart.png";
-import ProfileImage from "../../assets/Profile.png";
+import ProfileImage from "../../assets/profile.png";
 
 const Navbar = () => {
   const navigate = useNavigate();

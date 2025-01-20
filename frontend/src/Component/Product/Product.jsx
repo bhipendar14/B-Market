@@ -3,6 +3,7 @@ import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import { useCart } from "../CartContext"; // Import the Cart Context
 import "./Product.css";
+import { url } from "../../context";
 
 const Product = () => {
   const { addToCart } = useCart(); // Access addToCart from context
@@ -14,7 +15,7 @@ const Product = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch("http://localhost:5000/products");
+        const response = await fetch(`${url}/products`);
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }

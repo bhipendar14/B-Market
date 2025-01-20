@@ -5,7 +5,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import butterfly from "../../assets/butterfly.gif";;
-
+import { url } from "../../context";
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -30,7 +30,7 @@ const Signup = () => {
     if (!validate()) return;
 
     try {
-      const result = await axios.post("http://localhost:5000/signup", { name, email, password });
+      const result = await axios.post(`${url}/signup`, { name, email, password });
       if (result.status === 201) {
         toast.success("Account created successfully!");
         navigate("/login");

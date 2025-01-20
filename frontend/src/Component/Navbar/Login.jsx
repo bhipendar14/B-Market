@@ -4,6 +4,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import { useNavigate } from "react-router-dom";
 import axios from "axios"; // Ensure axios is installed: npm install axios
 import toast from "react-hot-toast";
+import { url } from "../../context";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -22,7 +23,7 @@ const Login = () => {
 
     try {
       // Make a POST request to your backend login route
-      const response = await axios.post("http://localhost:5000/login", { email, password });
+      const response = await axios.post(`${url}/login`, { email, password });
 
       // Save the token (if needed for future API requests)
       localStorage.setItem("token", response.data.token);
@@ -71,7 +72,7 @@ const Login = () => {
           <TextField
             fullWidth
             label="Enter Email"
-            type="email"    
+            type="email"
             margin="normal"
             value={email}
             onChange={handleEmailChange}
