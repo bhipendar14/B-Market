@@ -1,0 +1,151 @@
+/* Header Container */
+.header-container {
+    margin-top: 1px; /* Adjust for Navbar height */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://storage.ko-fi.com/cdn/useruploads/display/b4efe8e1-75ac-4831-8b3b-374cd03c9e47_sakuraviewingbganimatedgif.gif');
+    background-size: cover;
+    height: 510px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5px;
+}
+
+/* Carousel */
+.carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    background-color: transparent;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 auto; /* Center carousel */
+}
+
+/* Carousel Item */
+.carousel-item {
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Carousel Image */
+.carousel-image {
+    max-width: 300px;
+    width: 100%; /* Make the image responsive */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Carousel Details */
+.carousel-details h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.carousel-details p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Carousel Button */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+/* Left Button */
+.carousel-btn.left {
+    left: 15px;
+}
+
+/* Right Button */
+.carousel-btn.right {
+    right: 15px;
+}
+
+/* Carousel Button Hover Effect */
+.carousel-btn:hover {
+    background-color: #555;
+}
+
+/* Success Message */
+.success-message {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    /* Adjust header container padding for smaller screens */
+    .header-container {
+        padding: 10px;
+        height: 400px; /* Reduce height on small screens */
+    }
+
+    /* Reduce carousel image size on smaller screens */
+    .carousel-image {
+        max-width: 250px;
+    }
+
+    /* Reduce button size on small screens */
+    .carousel-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1.2rem;
+    }
+
+    /* Carousel details font size adjustments */
+    .carousel-details h3 {
+        font-size: 1.3rem;
+    }
+
+    .carousel-details p {
+        font-size: 0.9rem;
+    }
+
+    /* Make carousel items more compact on smaller screens */
+    .carousel {
+        max-width: 100%; /* Full width on small screens */
+    }
+}
+
+/* Extra small mobile screens */
+@media (max-width: 480px) {
+    /* Further reduce carousel image size */
+    .carousel-image {
+        max-width: 200px;
+    }
+
+    /* Further reduce button size */
+    .carousel-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 1.0rem;
+    }
+
+    /* Adjust header container height on very small screens */
+    .header-container {
+        height: 350px; /* Shorter height for ultra-small screens */
+    }
+}

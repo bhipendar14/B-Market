@@ -1,0 +1,113 @@
+/* Prevent horizontal scrolling */
+html, body {
+    overflow-x: hidden;
+  }
+
+  /* Main Navbar Styling */
+  .Navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+  }
+
+  /* Search Box */
+  .searchBox {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-grow: 1;
+    max-width: 600px;
+    margin: 0 20px;
+  }
+
+  .searchBox input {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+
+  .searchBox input:focus {
+    border-color: #007bff;
+  }
+
+  .searchIcon {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+  }
+
+  /* Navigation Links Styling */
+  .navLinks {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navLinks a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+
+  .navLinks a:hover {
+    color: #007bff;
+  }
+
+  /* Buttons Styling */
+  .Navbar ul li button {
+    padding: 8px 20px;
+    font-size: 16px;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .Navbar ul li button:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+
+
+
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .Navbar {
+      flex-wrap: wrap;
+      padding: 15px 20px;
+    }
+
+    .searchBox {
+      flex-grow: 1;
+      width: 100%;
+      margin: 10px 0;
+    }
+
+    .navLinks {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      width: 100%;
+    }
+  }

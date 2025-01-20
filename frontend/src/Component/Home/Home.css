@@ -1,0 +1,178 @@
+/* Home.css */
+.home-page {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('https://mir-s3-cdn-cf.behance.net/project_modules/1400/6a6fd549558457.58b8217c4d619.gif') no-repeat center center / cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.logo-container {
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+}
+
+.logo {
+    height: 80px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.tagline {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #ffedd5;
+    font-style: italic;
+}
+
+.welcome-banner {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    max-width: 650px;
+    text-align: center;
+    backdrop-filter: blur(0px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.welcome-banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffedd5;
+    font-weight: bold;
+}
+
+.welcome-banner p {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    color: #fdfdfd;
+    line-height: 1.5;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+.cta-btn {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border: 2px solid #fff;
+    background-color: transparent;
+    color: #fff;
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px);
+    background-color: #fff;
+    color: #ff7e5f;
+}
+
+.cta-btn.secondary {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.cta-btn.secondary:hover {
+    background-color: #fff;
+    color: #ff7e5f;
+}
+
+.footer1 {
+    margin-top: auto;
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    color: #fff;
+    font-size: 0.9rem;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer1 p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .welcome-banner {
+        padding: 30px;
+        max-width: 90%; /* Adjust banner width for smaller screens */
+    }
+
+    .welcome-banner h1 {
+        font-size: 2rem; /* Reduce font size for headers */
+    }
+
+    .welcome-banner p {
+        font-size: 1.1rem; /* Adjust paragraph font size */
+    }
+
+    .cta-btn {
+        padding: 10px 20px; /* Reduce button padding */
+        font-size: 1rem; /* Adjust button font size */
+    }
+
+    .tagline {
+        font-size: 1rem; /* Reduce tagline font size */
+    }
+
+    .logo {
+        height: 60px; /* Shrink logo size */
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome-banner {
+        padding: 20px;
+    }
+
+    .welcome-banner h1 {
+        font-size: 1.8rem;
+    }
+
+    .welcome-banner p {
+        font-size: 1rem;
+    }
+
+    .cta-btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    .tagline {
+        font-size: 0.9rem;
+    }
+
+    .logo {
+        height: 50px;
+    }
+
+    .footer1 {
+        font-size: 0.8rem; /* Adjust footer text size */
+    }
+}

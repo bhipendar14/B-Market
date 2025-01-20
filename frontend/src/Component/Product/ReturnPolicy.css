@@ -1,0 +1,110 @@
+/* General styling */
+.contact-info {
+    margin-top: 1px; /* Ensures the content starts below the fixed navbar */
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative; /* To allow absolute positioning of the arrow */
+  }
+
+  .policy-logo {
+    height: 60px;
+    cursor: pointer;
+  }
+  .back-arrow:hover {
+    background-color: #f1f1f1; /* Change background color on hover */
+  }
+
+  /* Header Section */
+  .header-section {
+    margin-bottom: 30px;
+  }
+
+  .logo {
+    height: 150px;
+    width: auto;
+    cursor: pointer;
+  }
+
+  h2 {
+    font-size: 2em;
+    color: #333;
+  }
+
+  /* Content Section */
+  .content {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .about-info,
+  .service-info,
+  .contact-info {
+    margin-bottom: 20px;
+  }
+
+  .about-info {
+    font-weight: bold;
+  }
+
+  .contact-info strong {
+    color: #007bff;
+  }
+
+  /* Footer Styling */
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto; /* Ensures footer stays at the bottom */
+    font-size: 1em;
+  }
+
+  footer p {
+    margin: 0;
+  }
+
+  /* Footer Link Styling */
+  .footer1 {
+    margin-top: auto;
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    color: #fff;
+    font-size: 0.9rem;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer1 p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+  /* Additional mobile responsiveness */
+  @media (max-width: 768px) {
+    .contact-info {
+      padding: 20px;
+    }
+
+    .logo {
+      height: 60px;
+    }
+
+    h2 {
+      font-size: 1.5em;
+    }
+
+    .content {
+      font-size: 1em;
+    }
+  }

@@ -1,0 +1,204 @@
+/* General Body Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Categories Row */
+.categories-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Gap below the navbar */
+    flex-wrap: wrap; /* Wrap items for smaller screens */
+}
+
+.category-item {
+    margin: 5px 10px; /* Reduced margin for better fit on smaller screens */
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.category-item:hover {
+    color: #007bff;
+    transform: scale(1.1);
+}
+
+/* Product Container */
+.electronics-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 15px;
+    max-width: 1600px;
+    margin: 10px auto 0;
+}
+
+/* Product Card Styles */
+.electronics-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.electronics-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.electronics-image {
+    height: 180px;
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.electronics-card:hover .electronics-image {
+    transform: scale(1.1);
+}
+
+.electronics-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin: 8px 0;
+}
+
+.electronics-description {
+    font-size: 12px;
+    color: #555;
+    margin: 8px 0;
+    height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.electronics-price {
+    font-size: 14px;
+    color: #000;
+    margin: 8px 0;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.discounted-price {
+    color: #000; /* Changed to black */
+    font-weight: bold;
+}
+
+.electronics-rating {
+    font-size: 12px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.add-to-cart-btn {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+.add-to-cart-btn:active {
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .electronics-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust grid for smaller screens */
+        padding: 10px;
+    }
+
+    .electronics-card {
+        padding: 10px;
+    }
+
+    .electronics-image {
+        height: 150px;
+    }
+
+    .electronics-title {
+        font-size: 14px;
+    }
+
+    .electronics-description {
+        font-size: 12px;
+    }
+
+    .electronics-price {
+        font-size: 12px;
+    }
+
+    .add-to-cart-btn {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .categories-row {
+        flex-direction: column; /* Stack categories vertically */
+        padding: 10px;
+    }
+
+    .category-item {
+        margin: 5px 0;
+    }
+
+    .electronics-container {
+        grid-template-columns: 1fr; /* Single column for very small screens */
+    }
+
+    .electronics-image {
+        height: 120px;
+    }
+
+    .electronics-title {
+        font-size: 12px;
+    }
+
+    .electronics-description {
+        font-size: 10px;
+    }
+
+    .add-to-cart-btn {
+        font-size: 10px;
+        padding: 6px 8px;
+    }
+}

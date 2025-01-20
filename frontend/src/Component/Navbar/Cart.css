@@ -1,0 +1,613 @@
+        /* Wrapper for the cart and summary */
+       
+        .cart-wrapper {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        /* Cart container styles */
+        .cart-container {
+            flex: 2;
+            max-width: 65%;
+            overflow-y: auto; /* Allows scroll within the cart container */
+            max-height: 80vh; /* Limits the height of the cart to prevent overflow */
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .cart-image {
+            width: auto;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .cart-details {
+            flex: 1;
+        }
+
+        h3 {
+            font-size: 25px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .cart-price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #e63946;
+        }
+
+        .cart-discount {
+            font-size: 16px;
+            color: #2a9d8f;
+        }
+
+        .cart-rating {
+            font-size: 16px;
+            color: #f4a261;
+            font-weight: bold;
+        }
+
+        .cart-quantity {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 10px 0;
+        }
+
+        .cart-quantity button {
+            background-color: black;
+            color: white;
+            border: none;
+            margin: 0 10px;
+            padding: 5px 10px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .cart-quantity button:hover {
+            background-color: #333;
+        }
+
+        .cart-quantity span {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .cart-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .buy-now-btn,
+        .remove-btn {
+            background-color: black;
+            color: white;
+            border: none;
+            margin: 10px 0;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .buy-now-btn:hover {
+            background-color: green;
+        }
+
+        .remove-btn:hover {
+            background-color: #b12424; /* Red hover effect for Remove button */
+        }
+
+        /* Cart Summary Styles */
+        .cart-summary {
+            flex: 1;
+            max-width: 30%;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 20px; /* Fix the box in place when scrolling */
+            align-self: flex-start; /* Ensures it sticks to the top of the cart container */
+        }
+
+        .cart-summary h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        .summary-item.total {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .savings {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #2a9d8f;
+            font-weight: bold;
+        }
+
+        .place-order-btn {
+            margin-top: 20px;
+            width: 100%;
+            padding: 15px;
+            background-color: black;
+            color: white;
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .place-order-btn:hover {
+            background-color: green;
+        }
+        /* Cart Summary Styles */
+        .cart-summary {
+            flex: none; /* Prevent stretching */
+            width: 100%; /* Occupy full width */
+            margin-top: 20px; /* Add spacing from the cart container */
+        }
+
+        /* Payment Options Section */
+        .payment-options {
+            display: none; /* Initially hidden */
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+            position: relative; /* Relative positioning for the close button */
+        }
+
+        .payment-options.active {
+            display: block; /* Show when active */
+        }
+
+        .payment-options h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .payment-options .payment-timer {
+            font-size: 18px;
+            color: #e63946;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .payment-options .payment-button {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .payment-options .payment-button button {
+            padding: 15px;
+            background-color: transparent;
+            color: black;
+            border: 1px solid black;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .payment-options .payment-button button:hover {
+            background-color: green;
+        }
+
+        /* Close Button for Payment Options */
+        .payment-options .close-btn {
+            background-color: ;
+            color: white;
+            border: none;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .payment-options .close-btn:hover {
+            background-color: #b12424;
+        }
+        /* Cart.css */
+
+        /* Overlay container */
+        .qr-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        /* QR Code content wrapper */
+        .qr-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.9); /* Transparent white background */
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+            position: relative;
+        }
+
+        /* QR Code image styling */
+        .qr-overlay img {
+            width: 250px; /* Adjust the size as needed */
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px; /* Gap between image and text */
+        }
+
+        /* Payment instruction text */
+        .qr-overlay p {
+            font-size: 18px;
+            color: #333;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+        }
+
+        /* Close button styling */
+        .close-qr-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #ff4d4d;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            font-size: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .close-qr-btn:hover {
+            background-color: #ff3333;
+            transform: scale(1.1);
+            transition: all 0.3s ease;
+        }
+
+        /* Overlay style */
+        .cod-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+
+        /* Content inside the overlay */
+        .cod-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 80%;
+            max-width: 400px;
+            position: relative; /* Ensure that the close button is positioned relative to this container */
+        }
+
+        .cod-content h3 {
+            margin: 0;
+            font-size: 24px;
+            color: #4CAF50; /* Green */
+        }
+
+        .cod-content p {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        /* Close button outside the box */
+        .close-cod-btn {
+            position: absolute;
+            top: -10px; /* Slightly outside the box */
+            right: -10px; /* Slightly outside the box */
+            background-color: black;
+            border: none;
+            color: white;
+            font-size: 20px;
+            padding: 5px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 1000; /* Ensure it stays above the overlay */
+        }
+
+        /* Hover effect for close button */
+        .close-cod-btn:hover {
+            background-color: white;
+            color: black;
+        }
+        .footer2 {
+            position: fixed; /* Fixes the footer to the bottom of the viewport */
+            bottom: 0;       /* Aligns it to the bottom */
+            left: 0;         /* Stretches it to the left edge */
+            width: 100%;     /* Ensures it spans the full width of the viewport */
+            background: rgba(0, 0, 0, 0.9); /* Dark background */
+            padding: 15px;
+            text-align: center;
+            color: #fff;
+            font-size: 0.9rem;
+            z-index: 1000; /* Ensures it stays on top of other elements */
+        }
+
+        .footer2 p {
+            margin: 0;
+            line-height: 1.5;
+        }
+/* Credit/Debit/ATM Modal Overlay */
+.credit-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    display: flex;
+    justify-content: center; /* Horizontally center the modal */
+    align-items: center; /* Vertically center the modal */
+    z-index: 2000; /* Ensure it's on top of other elements */
+}
+
+/* Credit/Debit/ATM Modal Content */
+.credit-modal-content {
+    background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white background */
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative; /* Ensure that the close button is positioned correctly */
+}
+
+/* Modal Heading */
+.credit-modal-content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Credit Card Input Fields */
+.credit-modal-content form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* Submit Button */
+.credit-modal-content button.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover Effect for Submit Button */
+.credit-modal-content button.submit-btn:hover {
+    background-color: #218838;
+}
+
+/* Close Button */
+.credit-modal-content .close-modal-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    color: #333;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 2001; /* Ensure it's above the content */
+}
+
+/* Hover Effect for Close Button */
+.credit-modal-content .close-modal-btn:hover {
+    color: #b12424;
+}
+/* General Mobile Styles */
+@media (max-width: 768px) {
+    /* Adjust body padding for mobile */
+    body {
+        padding: 10px;
+    }
+
+    /* Categories Row */
+    .categories-row {
+        flex-wrap: wrap; /* Wrap items to new lines if needed */
+        padding: 10px;
+    }
+
+    .category-item {
+        margin: 10px;
+        font-size: 14px;
+    }
+
+    /* Product Container */
+    .beauty-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust card size */
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .beauty-card {
+        padding: 10px;
+    }
+
+    .beauty-title {
+        font-size: 16px;
+    }
+
+    .beauty-description {
+        font-size: 12px;
+    }
+
+    .beauty-price,
+    .beauty-rating {
+        font-size: 14px;
+    }
+
+    /* Cart Section */
+    .cart-wrapper {
+        flex-direction: column; /* Stack items vertically */
+        gap: 10px;
+    }
+
+    .cart-container {
+        max-width: 100%; /* Full width for mobile */
+    }
+
+    .cart-item {
+        flex-direction: column; /* Stack content vertically */
+        gap: 20px;
+    }
+
+    .cart-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .cart-details {
+        text-align: center; /* Center align details */
+    }
+
+    .cart-summary {
+        width: 100%; /* Full width for mobile */
+        position: static; /* Allow normal flow */
+        margin-top: 20px;
+    }
+
+    /* Buttons */
+    .add-to-cart-btn,
+    .buy-now-btn,
+    .remove-btn,
+    .place-order-btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    /* Footer */
+    .footer2 {
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+}
+
+/* Very Small Devices */
+@media (max-width: 480px) {
+    /* Smaller product cards */
+    .beauty-container {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+
+    .beauty-card {
+        padding: 8px;
+    }
+
+    .beauty-title {
+        font-size: 14px;
+    }
+
+    .beauty-description {
+        font-size: 10px;
+    }
+
+    /* Cart Section */
+    .cart-item {
+        gap: 10px;
+    }
+
+    .cart-quantity {
+        flex-direction: column; /* Stack quantity controls */
+    }
+
+    .cart-quantity button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    /* Modal */
+    .credit-modal-content {
+        padding: 15px;
+    }
+
+    .credit-modal-content h2 {
+        font-size: 20px;
+    }
+
+    .credit-modal-content form input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .credit-modal-content button.submit-btn {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .credit-modal-content .close-modal-btn {
+        font-size: 24px;
+    }
+}

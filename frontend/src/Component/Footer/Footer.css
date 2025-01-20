@@ -1,0 +1,77 @@
+.footer {
+    background-color: #333; /* Dark background for the footer */
+    color: #fff; /* Light text for contrast */
+    padding: 20px 10px;
+    text-align: center;
+    font-size: 16px;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for better separation */
+}
+
+.footer-links ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Wrap links on smaller screens */
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin: 0 15px; /* Add spacing between links */
+}
+
+.footer-links a {
+    color: #fff; /* White text for links */
+    text-decoration: none;
+    font-weight: 500; /* Slightly bold for better readability */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.footer-links a:hover {
+    color: #007bff; /* Change link color on hover */
+}
+
+.footer-social {
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Space between icons */
+}
+
+.social-link {
+    color: #fff; /* Default icon color */
+    font-size: 20px; /* Icon size */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.social-link:hover {
+    color: #1DA1F2; /* Twitter's brand color for hover */
+}
+
+/* Footer Copy Section */
+.footer-copy {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ccc; /* Lighter text for secondary information */
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .footer-links ul {
+        flex-direction: column; /* Stack links vertically */
+        align-items: center;
+    }
+
+    .footer-links ul li {
+        margin: 8px 0; /* Add spacing for stacked items */
+    }
+
+    .footer-copy {
+        font-size: 12px; /* Reduce font size for smaller screens */
+    }
+
+    .social-link {
+        font-size: 18px; /* Adjust icon size for smaller screens */
+    }
+}
