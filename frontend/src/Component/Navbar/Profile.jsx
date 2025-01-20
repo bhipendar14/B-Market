@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./Profile.css";
 import { Link } from 'react-router-dom';
+import { url } from "../../context";
+
 
 const Profile = () => {
   const [user, setUser] = useState(null);
@@ -278,7 +280,7 @@ const Profile = () => {
     }
 
     axios
-      .get("http://localhost:5000/auth/me", {
+      .get(`${url}/auth/me`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((response) => {
