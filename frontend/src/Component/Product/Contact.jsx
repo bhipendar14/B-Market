@@ -22,7 +22,7 @@ const ContactInfo = () => {
 
         {/* Header Section */}
         <div className="header-section">
-          <Link to="/">
+          <Link to="/product">
             <img src={logo} alt="B-Market Logo" className="logo" />
           </Link>
           <h2>Welcome to B-Market</h2>
