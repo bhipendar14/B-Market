@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaLinkedin, FaInstagram, FaGithub, FaTwitter } from 'react-icons/fa'; // Import Twitter icon
 import './Footer.css';
 

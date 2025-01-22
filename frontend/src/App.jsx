@@ -1,4 +1,3 @@
-import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CartProvider } from "./Component/CartContext";
 import Navbar from "./Component/Navbar/Navbar";
@@ -15,15 +14,12 @@ import Grocery from "./Component/Navbar/Grocery";
 import Fashion from "./Component/Navbar/Fashion";
 import Furniture from "./Component/Navbar/Furniture";
 import Contact from "./Component/Product/Contact";
-
-
 import Our from "./Component/Product/Our";
 import About from "./Component/Product/About";
 import Terms from "./Component/Product/Terms";
 import Help from "./Component/Product/Help";
 import Return from "./Component/Product/Return";
 import SearchResults from "./Component/Navbar/SearchResults";
-
 import Cart from "./Component/Navbar/Cart";
 
 const App = () => {

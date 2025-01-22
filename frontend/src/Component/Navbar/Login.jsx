@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { Grid, TextField, Button, Typography, Paper, IconButton } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import { useNavigate } from "react-router-dom";
@@ -102,7 +102,7 @@ const Login = () => {
           </Button>
         </form>
         <Typography align="center" marginTop="20px">
-          Don't have an account?{" "}
+          Don&apos;t have an account?{" "}
           <Button variant="text" onClick={() => navigate("/signup")} sx={{ textTransform: "none", color: "black" }}>
             Register
           </Button>
